@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS Application</title>
+    <meta
+      name="description"
+      content="This Application developed by Peyman Ahmadi "
+    />
+    <!-- CSS Imports -->
+    <link rel="stylesheet" href="./public/css/globals.css" />
+    <link rel="stylesheet" href="./public/css/fonts.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="md:p-4 px-4 flex lg:flex-row flex-col gap-[33.6px] min-h-svh">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="space-y-[63.27px] grow!">
+        <!-- Logo -->
+        <header>
+          <div>
+            <a class="flex font-Poppins-Black items-center" href="/">
+              <img src="./public/images/svg/user-icon.svg" />
+              <p>XFIT KIDS</p>
+            </a>
+          </div>
+        </header>
+        <!-- Links -->
+      </div>
+      <main
+        class="grow w-full! my-[63.27px] pl-[33.6px] pr-0 *:px-5 *:rounded-l-full font-Poppins-SemiBold! text-[15.12px]!"
+      >
+        <div class="active-menu">
+          <i
+            class="absolute size-[43px] rounded-full bottom-full right-0 bg-primary z-10"
+          ></i>
+          <i
+            class="absolute size-[43px] rounded-full top-full right-0 bg-primary z-10"
+          ></i>
+          <img src="./public/images/svg/sidebar/dashboard.svg" alt="" />
+          <span> Dashboard </span>
+        </div>
+        <div class="flex items-center gap-[6.72px] h-[64px]">
+          <img src="./public/images/svg/sidebar/Attendance.svg" alt="" />
+          <span> Attendance </span>
+        </div>
+        <div class="flex items-center gap-[6.72px] h-[64px]">
+          <img src="./public/images/svg/sidebar/Sessions.svg" alt="" />
+          <span> Sessions </span>
+        </div>
+        <div class="flex items-center gap-[6.72px] h-[64px]">
+          <img src="./public/images/svg/sidebar/coaches.svg" alt="" />
+          <span> Coaches </span>
+        </div>
+        <div class="flex items-center gap-[6.72px] h-[64px]">
+          <img src="./public/images/svg/sidebar/exercises-plan.svg" alt="" />
+          <span> Exercise Plan </span>
+        </div>
+        <div class="flex items-center gap-[6.72px] h-[64px]">
+          <img src="./public/images/svg/sidebar/Registrations.svg" alt="" />
+          <span> Registrations </span>
+        </div>
+        <div class="flex items-center gap-[6.72px] h-[64px]">
+          <img src="./public/images/svg/sidebar/settings.svg" alt="" />
+          <span> Settings </span>
+        </div>
+      </main>
+      <footer
+        class="cursor-pointer mx-auto w-[165.47px] h-[162px] relative flex-center flex-col space-y-[11.72px] rounded-[27.72px] bg-white"
+      >
+        <div class="absolute right-[18px] top-[17.84px] z-50 text-primary!">
+          <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+        <img
+          src="./public/images/svg/sidebar/dumbell.svg"
+          alt="Dumbells"
+          class="mr-auto"
+        />
+        <p class="text-primary text-[11.76px] font-Poppins-ExtraBold">
+          Schedule an event
+        </p>
+      </footer>
+    </aside>
+
+    <!-- Content -->
+    <main class="grow">
+      <!-- Application Header -->
+      <header class="application-header">
+        <p
+          class="font-bold text-primary md:visible hidden invisible md:inline-block"
+        >
+          <strong> Welcome to xfitkids </strong>
+        </p>
+        <!-- Primary Elements -->
+        <div class="flex-center gap-[40.3px] w-full md:max-w-max">
+          <!-- Search Input -->
+          <div
+            class="h-[33.6px] md:w-[352.8px] w-full bg-white relative flex px-[13.44px] border rounded-[8.4px] border-[#CCCCCCBD] flex-center"
+          >
+            <button class="text-[#CCCCCCBD] absolute text-xs left-[13.44px]">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <input
+              type="search"
+              class="absolute size-full focus-within:outline-none text-sm pl-[39.48px]"
+              placeholder="Search"
+            />
+          </div>
+          <!-- Notification -->
+          <button class="cursor-pointer min-w-[24px] min-h-[24px]">
+            <img src="/public/images/svg/bell.svg" />
+          </button>
+          <!-- Profile dropdown -->
+          <div class="flex-center grow! cursor-pointer gap-[16.8px]">
+            <div
+              class="size-[34.44px]! bg-[url('/public/images/user-profile.jpg')] bg-cover bg-center rounded-[9.24px]"
+            ></div>
+            <span class="text-xs text-[#E5E5E5]">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Content area -->
+      <section class="my-[33.6px]" id="content">
+        <!-- Quick Summary -->
+        <div class="quick-summary-container">
+          <article>
+            <div class="summary-box_icon pt-1.5">
+              <img
+                class="md:size-auto size-[52px]!"
+                src="./public/images/svg/stand-human.svg"
+                alt="Image"
+              />
+            </div>
+            <div class="divider"></div>
+            <div class="flex-center flex-col">
+              <p class="font-Poppins-Black text-3xl md:text-[32px]">
+                <strong> 542 </strong>
+              </p>
+              <p class="md:text-sm text-[#00000066]">Coaches</p>
+            </div>
+          </article>
+          <article>
+            <div class="summary-box_icon">
+              <img
+                class="md:size-auto size-[32px]!"
+                src="./public/images/svg/kid.svg"
+                alt="Image"
+              />
+            </div>
+            <div class="divider"></div>
+            <div class="flex-center flex-col">
+              <p class="font-Poppins-Black text-3xl md:text-[32px]">
+                <strong> 9.7k </strong>
+              </p>
+              <p class="md:text-sm text-[#00000066]">Kids</p>
+            </div>
+          </article>
+          <article>
+            <div class="summary-box_icon pt-1.5">
+              <img
+                class="md:size-auto size-[48px]!"
+                src="./public/images/svg/dollar-sign.svg"
+                alt="Image"
+              />
+            </div>
+            <div class="divider"></div>
+            <div class="flex-center flex-col">
+              <p class="font-Poppins-Black text-3xl md:text-[32px]">
+                <strong> 50 M </strong>
+              </p>
+              <p class="md:text-sm text-[#00000066]">Revenue</p>
+            </div>
+          </article>
+        </div>
+
+        <!--  Charts -->
+        <div class="status-container">
+          <div class="status-row">
+            <article class="w-full md:w-[469.56px]">
+              <div class="status-header">
+                <h4 class="status-title">Today's Status</h4>
+              </div>
+              <div class="mt-[21.84px]">
+                <div class="status-detail-items-container">
+                  <div>
+                    <p class="text-primary text-[20.16px] font-Poppins-Black">
+                      <strong> 8.7K </strong>
+                    </p>
+                    <p class="status-detail-box-title">Total present</p>
+                  </div>
+                  <div>
+                    <p class="text-primary text-[20.16px] font-Poppins-Black">
+                      <strong> 99 </strong>
+                    </p>
+                    <p class="status-detail-box-title">Registration</p>
+                  </div>
+                  <div>
+                    <p class="text-primary text-[20.16px] font-Poppins-Black">
+                      <strong> 30</strong>
+                    </p>
+                    <p class="status-detail-box-title">Total session</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mt-[27.48px] grow h-[93.24px] overflow-hidden bg-[#F9F9F9] rounded-[8.4px] relative"
+              >
+                <div
+                  class="h-full w-[20.16px] absolute left-0 bg-[#F1554C]"
+                ></div>
+                <div class="container h-full px-[54.6px] flex-between grow">
+                  <div>
+                    <p class="text-[#393D54] font-Poppins-SemiBold!">
+                      Today’s WOD
+                    </p>
+                  </div>
+                  <div class="flex-center flex-col gap-0.5">
+                    <p class="font-Poppins-Black text-primary">
+                      <strong>Filthy Fifty</strong>
+                    </p>
+                    <p class="text-[11.76px] text-[#393D54]">Mecton</p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article>
+              <div class="status-header">
+                <h4 class="status-title">Batch Performance</h4>
+                <p class="text-[#999999]  ml-auto text-end !max-w-[60%] text-[11.71px] sm:text-[13.44px]">
+                  All information in percentage(%)
+                </p>
+              </div>
+              <div class="mt-[21px] grow overflow-hidden!">
+                <div class="size-full overflow-hidden flex md:flex-row flex-col items-center">
+                  <div class="h-full space-y-[39.48px] min-w-max">
+                    <article class="flex gap-2">
+                      <div
+                        class="bg-[#F1554C] rounded-[3.36px] size-[21px]"
+                      ></div>
+                      <div>
+                        <p
+                          class="text-primary text-[13.44px] font-Poppins-SemiBold"
+                        >
+                          Jr. Knights
+                        </p>
+                        <p class="text-[#BFBFBF] text-[11.76px]">Performance</p>
+                      </div>
+                    </article>
+                    <article class="flex gap-2">
+                      <div
+                        class="bg-primary rounded-[3.36px] size-[21px]"
+                      ></div>
+                      <div>
+                        <p
+                          class="text-primary text-[13.44px] font-Poppins-SemiBold"
+                        >
+                          Gladiators
+                        </p>
+                        <p class="text-[#BFBFBF] text-[11.76px]">Performance</p>
+                      </div>
+                    </article>
+                    <article class="flex gap-2">
+                      <div
+                        class="bg-[#FFA5A0] rounded-[3.36px] size-[21px]"
+                      ></div>
+                      <div>
+                        <p class="text-primary text-[13.44px]">Spartans</p>
+                        <p class="text-[#BFBFBF] text-[11.76px]">Performance</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="w-[300px] chart-container">
+                    <canvas id="chart-canvas"></canvas>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          
+          <div
+            class="flex items-center md:flex-row flex-col  *:h-[327px]! *:rounded-[25.2px] gap-[29.4px] *:bg-white *:p-[33.6px] relative"
+          >
+            <article class="md:w-[769.56px]! w-full invisible md:block! hidden">
+              Hidden Content For Responsive Stuff !
+            </article>
+
+
+            <article
+              class="shadow-[3px_0px_30px_9px_#0000000A] md:w-[469.56px]! md:h-[327px]! w-full md:absolute left-[35px] md:-rotate-[10deg] min-h-max! md:-top-[36.28px]"
+            >
+              <div class="status-header">
+                <h4 class="analytics-title">Revenue Generated</h4>
+              </div>
+              <div
+                class="mt-[20.16px] relative items-center justify-center grid grid-cols-1 sm:grid-cols-2 gap-6"
+              >
+                <div
+                  class="absolute w-[149.78px] h-[75.65px] bottom-1 md:!mx-auto left-0 right-0 rounded-[6.72px] bg-white p-1.5 shadow-[3px_0px_30px_9px_#0000000A]"
+                >
+                  <p class="text-primary font-Poppins-ExtraBold text-[20.16px]">
+                    25M
+                  </p>
+                  <p class="text-[#393D54] text-[10.08px]">Offline</p>
+                  <div
+                    class="cursor-pointer flex-center text-[11.76px]! text-[#CFCFCF]!"
+                  >
+                    <span>50 running batches</span>
+                    <span class="text-[#F1554C] text-[10px]">
+                      <i class="fa-solid fa-chevron-right"></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="space-y-[22.53px]">
+                  <article class="flex gap-2">
+                    <div
+                      class="bg-[#F1554C] rounded-[3.36px] size-[21px]"
+                    ></div>
+                    <div>
+                      <p class="text-primary text-[13.44px]">Online</p>
+                      <p class="text-[#BFBFBF] text-[11.76px]">
+                        <span class="text-primary">50%</span>
+                        of total revenue
+                      </p>
+                    </div>
+                  </article>
+                  <article class="flex gap-2">
+                    <div
+                      class="bg-[#0F296D] rounded-[3.36px] size-[21px]"
+                    ></div>
+                    <div>
+                      <p class="text-primary text-[13.44px]">Offline</p>
+                      <p class="text-[#BFBFBF] text-[11.76px]">
+                        <span class="text-primary">30%</span>
+                        of total revenue
+                      </p>
+                    </div>
+                  </article>
+                  <article class="flex gap-2">
+                    <div
+                      class="bg-[#FFA5A0] rounded-[3.36px] size-[21px]"
+                    ></div>
+                    <div>
+                      <p class="text-primary text-[13.44px]">Events</p>
+                      <p class="text-[#BFBFBF] text-[11.76px]">
+                        <span class="text-primary">20%</span>
+                        of total revenue
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div class="size-full flex-center">
+                  <span class="absolute font-Poppins-SemiBold text-[16.8px]"
+                    >50M</span
+                  >
+                  <img
+                    src="./public/images/svg/rounded-chart.svg"
+                    class="object-cover size-[228px]!"
+                  />
+                </div>
+              </div>
+            </article>
+
+
+            <article class=" min-h-max w-full!">
+              <div class="status-header">
+                <h4 class="analytics-title">Top Performer</h4>
+                <div
+                  class="w-[108.3px] text-[11.76px] select-none cursor-pointer text-[#393D54] h-[31.92px] rounded-[8.2px] flex-center gap-[6.3px] border-[0.84px] border-[#E5E5E5]"
+                >
+                  <p>June – July</p>
+                  <span class="text-xs text-[#E5E5E5]">
+                    <i class="fa-solid fa-chevron-down"></i>
+                  </span>
+                </div>
+              </div>
+              <div
+                class="grid grid-cols-2 md:grid-cols-3 *:flex *:flex-col *:items-center *:justify-center gap-3 grow! sm:gap-[21px] *:h-[210.83999633789062px] *:rounded-[19.32px] *:relative *:overflow-hidden mt-[20.16px]"
+              >
+                <article class="bg-[#F1554C]">
+                  <span class="absolute -top-1 -right-1">
+                    <img src="./public/images/svg/dumbell.svg" alt="Dumbell" class="md:size-auto size-[]" />
+                  </span>
+                  <div class="size-[41.16px] rounded-full overflow-hidden">
+                    <img
+                      src="./public/images/kid-1.jpg"
+                      class="size-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flex-center mt-[6.72px] flex-col gap-[1.68px]">
+                    <p class="font-Poppins-Black text-white text-[15.12px]">
+                      Nivaan
+                    </p>
+                    <p class="text-[10px] text-white">Gladiators</p>
+                  </div>
+                  <div class="flex-center text-white flex-col mt-[7.56px]">
+                    <p class="text-[16.8px] font-Poppins-Black">80%</p>
+                    <p class="text-[10.08px]">Attendance</p>
+                  </div>
+                  <div class="w-full mt-[13.44px] px-[10.8px]">
+                    <button class="cta-button">Blue Badge</button>
+                  </div>
+                </article>
+                <article class="bg-primary">
+                  <span class="absolute -top-1 -right-1">
+                    <img src="./public/images/svg/dumbell.svg" alt="Dumbell" class="md:size-auto size-[]" />
+                  </span>
+                  <div class="size-[41.16px] rounded-full overflow-hidden">
+                    <img
+                      src="./public/images/kid-2.jpg"
+                      class="size-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flex-center mt-[6.72px] flex-col gap-[1.68px]">
+                    <p class="font-Poppins-Black text-white text-[15.12px]">
+                      Nivaan
+                    </p>
+                    <p class="text-[10px] text-white">Gladiators</p>
+                  </div>
+                  <div class="flex-center text-white flex-col mt-[7.56px]">
+                    <p class="text-[16.8px] font-Poppins-Black">80%</p>
+                    <p class="text-[10.08px]">Attendance</p>
+                  </div>
+                  <div class="w-full mt-[13.44px] px-[10.8px]">
+                    <button class="cta-button">Pink Badge</button>
+                  </div>
+                </article>
+                <article class="bg-[#FFA5A0]">
+                  <span class="absolute -top-1 -right-1">
+                    <img src="./public/images/svg/dumbell.svg" alt="Dumbell" class="md:size-auto size-[]" />
+                  </span>
+                  <div class="size-[41.16px] rounded-full overflow-hidden">
+                    <img
+                      src="./public/images/kid-3.jpg"
+                      class="size-full object-cover"
+                      alt=""
+                    />
+                  </div>
+                  <div class="flex-center mt-[6.72px] flex-col gap-[1.68px]">
+                    <p class="font-Poppins-Black text-white text-[15.12px]">
+                      Nivaan
+                    </p>
+                    <p class="text-[10px] text-white">Gladiators</p>
+                  </div>
+                  <div class="flex-center text-white flex-col mt-[7.56px]">
+                    <p class="text-[16.8px] font-Poppins-Black">70%</p>
+                    <p class="text-[10.08px]">Attendance</p>
+                  </div>
+                  <div class="w-full mt-[13.44px] px-[10.8px]">
+                    <button class="cta-button">Orange Badge</button>
+                  </div>
+                </article>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("chart-canvas").getContext("2d");
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["Jr. Knights ", "Gladiators ", "Spartans"],
+          datasets: [
+            {
+              label: "Performance (%)",
+              data: [85, 24, 56],
+              backgroundColor: ["#F1554C", "#0F296D", "#FFA5A0"],
+              borderColor: ["#D32F2F", "#0D1A4A", "#FF8A80"],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 100,
+              title: {
+                display: true,
+              },
+            },
+          },
+          plugins: {
+            legend: {
+              display: true,
+              position: "top",
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

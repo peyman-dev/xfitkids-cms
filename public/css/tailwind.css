@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@import url(./fonts.css);
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  --color-primary: #0f296d;
+
+  /* Fonts */
+  --font-Poppins-Light: Poppins-Light;
+  --font-Poppins-Regular: Poppins-Regular;
+  --font-Poppins-Medium: Poppins-Medium;
+  --font-Poppins-SemiBold: Poppins-SemiBold;
+  --font-Poppins-ExtraBold: Poppins-ExtraBold;
+  --font-Poppins-Black: Poppins-Black;
+}
+
+body {
+  font-family: "Poppins-Regular" !important;
+  @apply bg-[#F3F5FB] max-w-[1600px] mx-auto;
+}
+@utility container {
+  @apply mx-auto;
+}
+
+@utility flex-between {
+  @apply flex items-center justify-between;
+}
+
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  display: none;
+}
+
+.summary-box_icon {
+  @apply flex-center size-[64px] md:size-[80px] bg-gradient-to-bl from-[#375DBE] rounded-[20px] to-primary;
+}
+
+.divider {
+  border: 0.84px solid #e5e5e5;
+  @apply w-0 h-[64px];
+}
+
+.status-title {
+  @apply text-sm min-w-max sm:text-[16.8px] text-[#393D54] font-Poppins-SemiBold;
+}
+
+.status-header {
+  @apply flex-between;
+}
+
+.status-row {
+  @apply flex *:even:grow items-center md:flex-row flex-col grow *:min-h-max md:*:h-[327px] *:rounded-[25.2px] gap-[29.4px] *:bg-white *:p-4 md:*:p-[33.6px];
+}
+
+.cta-button {
+  @apply bg-[#FFFFFF87] rounded-[10.92px] w-full grow cursor-pointer h-[38.63px] font-Poppins-Medium md:text-base text-xs flex-center text-white;
+}
+
+.chart-container {
+    @apply w-full h-[240px] md:h-[240px] *:w-[100%]! *:h-full! 
+}
+
+.active-menu {
+    @apply flex items-center gap-[6.72px] h-[64px] text-primary! bg-[#F3F5FB]! before:bg-[#F3F5FB] before:absolute before:size-[25px] before:right-0 before:top-full relative before:content-[''] after:content-[''] after:bg-[#F3F5FB] after:bottom-full after:size-[25px] after:right-0 after:absolute
+}
+
+.sidebar {
+    @apply w-[232px] bg-primary h-full py-[33.6px] min-h-[728px] transition-all duration-150 rounded-[31.08px] text-white lg:flex! items-center justify-between flex-col sticky top-4 lg:visible!  hidden! invisible!
+}
+
+.application-header {
+    @apply container h-[75.6px] bg-white p-[33.6px] flex-between rounded-b-[20.16px] shadow-[3px_0px_30px_9px_#0000000A]
+}
+
+.quick-summary-container {
+    @apply grid grid-cols-1 gap-4 md:gap-10 container *:h-[92px] md:*:h-[147.84px] *:rounded-[25.2px] *:w-full *:pl-[42.7px] *:pr-[50.52px] *:bg-white *:flex *:items-center *:gap-[43px] sm:grid-cols-2 md:grid-cols-3 *:shadow-[3px_0px_30px_9px_#0000000A] 
+}
+
+.status-container {
+    @apply my-[33.6px] container space-y-[33.6px]
+}
+
+.status-detail-items-container {
+    @apply grid grid-cols-3 *:grow *:bg-[#F9F9F9] *:h-[93.23px] *:rounded-[8.4px] *:flex-center *:flex-col *:gap-[5.88px] gap-[25.2px]
+}
+
+.status-detail-box-title {
+    @apply text-[11.76px] text-[#393D54] font-Poppins-SemiBold!
+}
